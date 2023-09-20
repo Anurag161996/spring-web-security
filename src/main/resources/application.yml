@@ -10,3 +10,8 @@ spring:
     url: jdbc:postgresql://ep-twilight-sound-50986431.ap-southeast-1.aws.neon.tech/neondb
     username: anuragsrmcse
     password: 9o0FtwHCMJmN
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui-custom.html
