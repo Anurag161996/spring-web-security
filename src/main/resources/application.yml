@@ -3,6 +3,11 @@ server:
 spring:
   profiles:
     active: local
+  cache:
+    type: caffeine
+    cache-names: tokenCache
+    caffeine:
+      spec: "maximumSize=100,expireAfterWrite=1800s"
   #  jpa:
   #    hibernate:
   #      ddl-auto: create

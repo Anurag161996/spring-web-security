@@ -2,6 +2,7 @@ package com.project.security.controller;
 
 import com.project.security.model.AuthRequest;
 import com.project.security.model.UserInfo;
+import com.project.security.service.ExpiryTokenService;
 import com.project.security.service.JwtService;
 import com.project.security.service.UserInfoServiceImpl;
 import com.project.security.service.UserServiceImpl;
@@ -28,6 +29,9 @@ public class UserController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
+
+    @Autowired
+    ExpiryTokenService expiryTokenService;
 
     @GetMapping("/welcome")
     public String welcome() {
